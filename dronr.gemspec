@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Dronr::VERSION
   spec.authors       = ["Dan Davey"]
   spec.email         = ["dan@recombinary.com"]
-  spec.summary       = %q{Developer automation tool for Ruby-based applications}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Dev automation for Rails apps}
+  spec.description   = %q{}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
+
+  spec.add_dependency "pry"
+
+  spec.add_dependency "thor"
+  spec.add_dependency "thor-rails"
 end

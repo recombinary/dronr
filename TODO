@@ -1,0 +1,43 @@
+# --------------------------
+# The Recombinary Way (no tm)
+# --------------------------
+
+
+# for RUBY
+
+
+gem install dronr
+
+dronr rails new myapp
+
+
+
+# ----------------
+
+APP:
+Procfile
+-> gems
+
+
+# -----------------
+
+SUITE:
+..apps
+
+
+# ---------------
+
+# deployment
+
+git push staging master
+git push production master
+
+
+
+
+DEPLOYMENT PLATFORM:
+a) Heroku (lowest hanging)
+b) ??? (best calculated value)
+
+
+

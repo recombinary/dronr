@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'dronr'
+
+Dronr::CLI.start(ARGV)
+
