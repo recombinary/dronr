@@ -1,8 +1,10 @@
 module Dronr
   module Drones
+
     extend ActiveSupport::Autoload
  
     autoload :Cleanup
+    autoload :Dotenv
     autoload :Dronr
     autoload :FactoryGirl
     autoload :Foundation

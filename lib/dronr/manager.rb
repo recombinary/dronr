@@ -99,6 +99,12 @@ module Dronr
         install_drone(drone)
       end
 
+      say_status :dronr, "Finishing..", :blue
+
+      bundled_drones.each do |drone|
+        finish_drone(drone)
+      end
+
     end
 
     def bundle_drone(drone)
@@ -117,9 +123,17 @@ module Dronr
       if block = drone.class.install_block
         @app_generator.instance_eval(&block)
       end
+    end
+
+    def finish_drone(drone)
+
+      if block = drone.class.finish_block
+        @app_generator.instance_eval(&block)
+      end
 
       drone.state = :finished
     end
+
 
     def say_status(*opts)
       @app_generator.say_status(*opts)

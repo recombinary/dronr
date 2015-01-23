@@ -6,8 +6,8 @@ module Dronr
         gem 'underscore-rails'
       end
 
-      install do
-        # TODO: require underscore
+      finish do
+        say_status :dronr, 'Now add `//= require underscore` to your javascript manifest'
       end
 
     end

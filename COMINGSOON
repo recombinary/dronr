@@ -17,6 +17,52 @@ email_validator
 active_attr
 
 
+incoming:
+# core:
+
+# app:
+# - foreman
+# - resque
+# - sidekiq
+
+# database:
+- postgresql
+- migrant
+
+# templating:
+- slim
+
+# assets:
+- foundation
+- foundation_icons
+- underscore
+
+# development:
+- dotenv
+- rspec
+# - guard
+# - guard_rspec
+- factory_girl
+
+# integration:
+# - shippable
+
+# deployment:
+# - heroku
+
+# team:
+# - slack
+
+- cleanup
+
+- git
+
+bundled:
+
+finished:
+
+
+
 select2-rails
 
 gritter

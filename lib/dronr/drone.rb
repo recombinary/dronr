@@ -11,10 +11,11 @@ module Dronr
     end
 
     def self.find_class_by_human_name(human_name)
+      class_name = human_name.camelize
       begin
-        "Dronr::Drones::#{human_name.classify}".constantize
+        "Dronr::Drones::#{class_name}".constantize
       rescue Exception => e
-        raise DroneNotFoundError.new(human_name), "`#{human_name}` is not a valid Drone name"
+        raise DroneNotFoundError.new(human_name), "`#{human_name}` is not a valid Drone name (looked for #{class_name})"
       end
     end
 
@@ -26,7 +27,7 @@ module Dronr
       {}
     end
 
-    %w{bundle install}.each do |directive|
+    %w{bundle install finish}.each do |directive|
 
       define_singleton_method(directive) do |&block|
         instance_variable_set :"@#{directive}_block", block

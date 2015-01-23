@@ -2,40 +2,24 @@ incoming:
 # core:
 
 # app:
-# - foreman
-# - resque
-# - sidekiq
 
 # database:
-- postgresql
-- migrant
+# - postgresql
+# - migrant
 
 # templating:
-- slim
+# - slim
 
-# assets:
-- foundation
-- foundation_icons
-- underscore
+# - foundation
+# - foundation_icons
+# - underscore
 
-# development:
-- rspec
-# - guard
-# - guard_rspec
-- factory_girl
+# - dotenv
+# - rspec
+# - factory_girl
 
-# integration:
-# - shippable
-
-# deployment:
-# - heroku
-
-# team:
-# - slack
-
-- cleanup
-
-- git
+# - cleanup
+# - git
 
 bundled:
 

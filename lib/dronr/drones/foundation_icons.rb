@@ -6,9 +6,8 @@ module Dronr
         gem 'foundation-icons-sass-rails'
       end
 
-      install do
-        # TODO
-        # @import 'foundation-icons';
+      finish do
+        say_status :dronr, "Now add `@import 'foundation-icons'` to your stylesheet", :red
       end
 
     end

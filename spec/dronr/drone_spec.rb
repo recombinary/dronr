@@ -37,6 +37,10 @@ module Dronr
         install do
           'TestableDrone1 #install'
         end
+
+        finish do
+          'TestableDrone1 #finish'
+        end
       end
 
       class TestableDrone2 < Drone
@@ -47,15 +51,21 @@ module Dronr
         install do
           'TestableDrone2 #install'
         end
+
+        finish do
+          'TestableDrone2 #finish'
+        end
       end
 
 
       it 'captures unique #bundle and #install directives' do
         expect(TestableDrone1.bundle_block.call).to eq 'TestableDrone1 #bundle'
         expect(TestableDrone1.install_block.call).to eq 'TestableDrone1 #install'
+        expect(TestableDrone1.finish_block.call).to eq 'TestableDrone1 #finish'
 
         expect(TestableDrone2.bundle_block.call).to eq 'TestableDrone2 #bundle'
         expect(TestableDrone2.install_block.call).to eq 'TestableDrone2 #install'
+        expect(TestableDrone2.finish_block.call).to eq 'TestableDrone2 #finish'
       end
 
     end
