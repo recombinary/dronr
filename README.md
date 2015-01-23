@@ -16,8 +16,14 @@ Dronr is opinionated, designed to promote best practices and coding patterns, an
  
 You can also supply a path to a valid register file
 
-    $ dronr new MyApp --template templates/api_server.yml
+    $ dronr new MyApp --template templates/prototyping.yml
 
+Or try a popular configuration
+
+    $ dronr new MyApp --template https://dronr.recombinary.com/templates/api_server.yml
+
+
+#### Under the hood
 
 The `dronr new` command runs like so:
 
@@ -26,24 +32,30 @@ The `dronr new` command runs like so:
 3. Set up register file if a template register was supplied (more on this later)
 4. Invoke `dronr up` to run any new drones
 
-### Existing app
+### Bootstrapping an existing app
 
 If your app was not generated with the `dronr new` command, you can bootstrap it by navigating to the app directory and running:
 
     $ bundle exec dronr bootstrap
 
-Be aware that existing apps might already have undergone manual installation of some drones you may want to add. See "Register entries for manual tasks"
+with an optional template argument
+
+    $ bundle exec dronr bootstrap --template templates/prototyping.yml
+
+This will install the dronr gem, generate a binstub, and copy the template register.
+
+Be aware that existing apps might already have undergone manual installation of some drones you may want to add. I'll add more info here later.
 
 
 # Drones
 
-To see a list of available drones:
+## Listing drones
 
-    $ bin/dronr list
+Coming soon.
 
 ## Adding a drone
 
-Add a drone by appending it's name in .dronr.yml
+Register a drone for installation by adding it's name to the 'incoming' list in .dronr.yml
 
     incoming:
       - rspec
@@ -53,9 +65,10 @@ Add a drone by appending it's name in .dronr.yml
 Whenever you're ready to run new changes:
 
     $ bin/dronr up
-    
-    $ ... installing ... (feedback)
 
+Drone work their way from `incoming`, to `bundled` (once a drone's gems have been installed), to `finished` (once a drone's installation commands have been executed).
+
+Note that it may take multiple iterations of `dronr up` to complete the entire process. This is because gems & config are changing so code may need to be reloaded.
 
 
 ## Contributing

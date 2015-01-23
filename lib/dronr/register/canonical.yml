@@ -1,28 +1,27 @@
 incoming:
+# core:
+- postgresql
 
-  # core:
-  - postgresql
+# app:
+# - foreman
+# - resque
+# - seeds
+# - sidekiq
 
-  # app:
-  # - foreman
-  # - resque
-  # - seeds
-  # - sidekiq
+# development:
+# - rspec
+# - guard
+# - guard_rspec
+# - factory_girl
 
-  # development:
-  # - rspec
-  # - guard
-  # - guard_rspec
-  # - factory_girl
+# integration:
+# - shippable
 
-  # integration:
-  # - shippable
+# deployment:
+# - heroku
 
-  # deployment:
-  # - heroku
-
-  # team:
-  # - slack
+# team:
+# - slack
 
 bundled:
 
