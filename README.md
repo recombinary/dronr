@@ -1,3 +1,5 @@
+This is a long-overdue rewrite of a previous project of mine, [jeriko/app_drone](https://github.com/jeriko/app_drone)
+
 # Dronr
 
 Dronr is your Rails 4 workhorse. Boring application setup, fully automated!
@@ -10,7 +12,7 @@ Dronr is opinionated, designed to promote best practices and coding patterns, an
 
     $ gem install dronr
 
-### Brand new app
+### Create a brand new app
 
     $ dronr new MyApp
  
@@ -18,7 +20,7 @@ You can also supply a path to a valid register file
 
     $ dronr new MyApp --template templates/prototyping.yml
 
-Or try a popular configuration
+Or try a popular configuration (coming soon)
 
     $ dronr new MyApp --template https://dronr.recombinary.com/templates/api_server.yml
 
