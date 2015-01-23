@@ -12,6 +12,7 @@ module Dronr
 
       install do
         generate('rspec:install')
+        bundle_command 'binstub rspec-core'
       end
 
     end

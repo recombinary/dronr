@@ -1,13 +1,13 @@
 module Dronr
   module Drones
-    class Foundation < Drone
+    class Underscore < Drone
 
       bundle do
-        gem 'foundation-rails'
+        gem 'underscore-rails'
       end
 
       install do
-        generate('foundation:install')
+        # TODO: require underscore
       end
 
     end

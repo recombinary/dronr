@@ -1,0 +1,62 @@
+.env
+quiet_assets
+letter_opener
+js-routes
+momentjs-rails
+compass-rails
+faker
+simple_form
+show_for
+mapbox-rails
+
+rabl-rails
+gon
+draper
+
+email_validator
+active_attr
+
+
+select2-rails
+
+gritter
+
+
+# app/workers
+
+'resque'
+'resque-web', require: 'resque_web'
+gem 'resque-scheduler'
+gem 'resque-retry'
+gem 'resque-loner'
+gem 'redis'
+
+# OAuth for configurable routes
+gem 'simple_admin_auth'
+
+foreman
+timecop
+
+# spec
+
+
+group :test do
+  gem 'simplecov', require: false
+  gem 'shoulda-matchers'
+  # gem 'webmock', '~> 1.13.0'
+  # gem 'vcr'
+  gem 'rspec-xml'
+end
+
+group :doc do
+  gem 'sdoc', require: false
+end
+
+# deploy
+gem 'capistrano', '~> 3.2'
+gem 'capistrano-rails', '~> 1.1'
+gem 'honeybadger'
+
+# lib
+gem 'nokogiri'
+gem 'color'

@@ -1,21 +1,28 @@
 incoming:
 # core:
-- postgresql
 
 # app:
 # - foreman
 # - resque
-# - seeds
 # - sidekiq
+
+# database:
+- postgresql
+- migrant
+
+# templating:
+- slim
 
 # assets:
 - foundation
+- foundation_icons
+- underscore
 
 # development:
-# - rspec
+- rspec
 # - guard
 # - guard_rspec
-# - factory_girl
+- factory_girl
 
 # integration:
 # - shippable
@@ -26,7 +33,11 @@ incoming:
 # team:
 # - slack
 
+- cleanup
+
+- git
+
 bundled:
 
 finished:
-- dronr
+
