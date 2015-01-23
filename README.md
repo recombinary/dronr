@@ -34,7 +34,7 @@ The `dronr new` command runs like so:
 3. Set up register file if a template register was supplied (more on this later)
 4. Invoke `dronr up` to run any new drones
 
-### Bootstrapping an existing app
+### Bootstrapping an existing app (coming soon)
 
 If your app was not generated with the `dronr new` command, you can bootstrap it by navigating to the app directory and running:
 
