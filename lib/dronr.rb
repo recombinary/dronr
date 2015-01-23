@@ -1,12 +1,17 @@
-require 'pry'
 require 'dronr/version'
+require 'pry'
+
+require 'rails'
+require 'rails/generators'
 
 module Dronr
 
   extend ActiveSupport::Autoload
 
   autoload :CLI
-  autoload :Features
+  autoload :Drone
+  autoload :Drones
+  autoload :Manager
+  autoload :Register
 
-  # Your code goes here...
 end

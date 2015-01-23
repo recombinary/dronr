@@ -1,43 +1,4 @@
-# --------------------------
-# The Recombinary Way (no tm)
-# --------------------------
+# TODO
 
-
-# for RUBY
-
-
-gem install dronr
-
-dronr rails new myapp
-
-
-
-# ----------------
-
-APP:
-Procfile
--> gems
-
-
-# -----------------
-
-SUITE:
-..apps
-
-
-# ---------------
-
-# deployment
-
-git push staging master
-git push production master
-
-
-
-
-DEPLOYMENT PLATFORM:
-a) Heroku (lowest hanging)
-b) ??? (best calculated value)
-
-
-
+1. Improve resilience against failures during dronr commands. For example, currently if bundle fails during `dronr up`, the app requires manual repairing.
+2. `dronr stage` to see what changes will be applied by `dronr up

@@ -1,0 +1,30 @@
+incoming:
+
+  # core:
+  - postgresql
+
+  # app:
+  # - foreman
+  # - resque
+  # - seeds
+  # - sidekiq
+
+  # development:
+  # - rspec
+  # - guard
+  # - guard_rspec
+  # - factory_girl
+
+  # integration:
+  # - shippable
+
+  # deployment:
+  # - heroku
+
+  # team:
+  # - slack
+
+bundled:
+
+finished:
+- dronr

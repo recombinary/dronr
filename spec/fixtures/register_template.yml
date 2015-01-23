@@ -1,0 +1,9 @@
+incoming:
+  - drone2
+  - drone1
+
+bundled:
+  - drone4
+
+finished:
+  - drone3

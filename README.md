@@ -1,26 +1,62 @@
 # Dronr
 
-TODO: Write a gem description
+Dronr is your Rails 4 workhorse. Boring application setup, fully automated!
 
-## Installation
+Dronr is opinionated, designed to promote best practices and coding patterns, and doesn't aim to provide installations for the totality of existing things.
 
-Add this line to your application's Gemfile:
+## Getting started
 
-```ruby
-gem 'dronr'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+### Installation
 
     $ gem install dronr
 
-## Usage
+### Brand new app
 
-TODO: Write usage instructions here
+    $ dronr new MyApp
+ 
+You can also supply a path to a valid register file
+
+    $ dronr new MyApp --template templates/api_server.yml
+
+
+The `dronr new` command runs like so:
+
+1. Generate app structure (like `rails new`) with custom config (e.g. `--skip-test-unit` if RSpec was declared)
+2. Install dronr gem in newly generated app & generate binstub
+3. Set up register file if a template register was supplied (more on this later)
+4. Invoke `dronr up` to run any new drones
+
+### Existing app
+
+If your app was not generated with the `dronr new` command, you can bootstrap it by navigating to the app directory and running:
+
+    $ bundle exec dronr bootstrap
+
+Be aware that existing apps might already have undergone manual installation of some drones you may want to add. See "Register entries for manual tasks"
+
+
+# Drones
+
+To see a list of available drones:
+
+    $ bin/dronr list
+
+## Adding a drone
+
+Add a drone by appending it's name in .dronr.yml
+
+    incoming:
+      - rspec
+      - simple_form
+      - ...
+
+Whenever you're ready to run new changes:
+
+    $ bin/dronr up
+    
+    $ ... installing ... (feedback)
+
+
 
 ## Contributing
 
