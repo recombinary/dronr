@@ -8,6 +8,9 @@ incoming:
 # - seeds
 # - sidekiq
 
+# assets:
+- foundation
+
 # development:
 # - rspec
 # - guard
