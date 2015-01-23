@@ -6,6 +6,7 @@ module Dronr
     autoload :Dronr
     autoload :FactoryGirl
     autoload :Foundation
+    autoload :FoundationIcons
     autoload :Git
     autoload :Migrant
     autoload :Postgresql
