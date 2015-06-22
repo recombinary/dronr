@@ -1,33 +1,23 @@
 incoming:
-# core:
 
-# app:
-
-# database:
 - postgresql
 - migrant
 
-# templating:
 - slim
-
-# decorating:
 - draper
 
-# assets:
 - compass
 - foundation
 - foundation_icons
+
 - underscore
 
-# test:
+- dotenv
 - rspec
 - factory_girl
 
-# deploy:
 - heroku
 
-# misc
-- dotenv
 - cleanup
 - git
 

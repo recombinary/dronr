@@ -4,12 +4,15 @@ module Dronr
     extend ActiveSupport::Autoload
  
     autoload :Cleanup
+    autoload :Compass
     autoload :Dotenv
     autoload :Dronr
+    autoload :Draper
     autoload :FactoryGirl
     autoload :Foundation
     autoload :FoundationIcons
     autoload :Git
+    autoload :Heroku
     autoload :Migrant
     autoload :Postgresql
     autoload :Rspec

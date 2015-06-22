@@ -3,11 +3,11 @@ module Dronr
     class Dronr < Drone
 
       bundle do
-        gem 'dronr', "~> #{::Dronr::VERSION}"
+        gem 'dronr', "~> #{::Dronr::VERSION}", group: :development
       end
 
       bundle do
-        gem 'dronr', path: '../../dronr'
+        gem 'dronr', path: '../../dronr', group: :development
       end if ENV['DEBUG']
 
       install do
